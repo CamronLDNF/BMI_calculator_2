@@ -69,12 +69,17 @@
                 weight: w,
                 height: h,
             });
-            person.calculate_bmi();
+
+            let method = document.getElementById('method').value
+            if (method == 'Metric') {
+                person.calculate_bmi_metric();
+            } else if (method == 'Imperial') {
+                person.calculate_bmi_imperial();
+            }
             resolve(person);
         })
     };
 </script>
-
 
 </body>
 
