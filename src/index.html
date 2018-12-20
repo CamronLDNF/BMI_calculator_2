@@ -15,25 +15,35 @@
     <script src="js/calculator.js"></script>
 </head>
 
-<body>
-  <form id="calculate">
-      <div id="metric-inputs">
-          <input type="text" id="weight" placeholder="Weight">
-          <input type="text" id="height" placeholder="Height">
-      </div>
+<body style="font-size: 18px">
 
-      <select id="method">
-        <option>Metric</option>
-        <option>Imperial</option>
-      </select>
+    <div class="mui-container" style="margin-top: 2rem; width: 30rem">
+        <div class="mui-panel">
+            <h1>BMI Calculator</h1>
 
-      <button type="submit" value="Calculate"> Calculate </button>
-  </form>
-  <div>
-      <span id="display_value"></span>
-      <span id="display_message"></span>
-  </div>
+            <form id="calculate">
+                <div class="mui-select" style="width: 24.5rem">
+                    <select id="method">
+                        <option>Metric</option>
+                        <option>Imperial</option>
+                    </select>
+                    <label>Metric or Imperial method?</label>
+                </div>
+                
+                <div id="metric-inputs">
+                    <input type="text" id="weight" placeholder="Weight">
+                    <input type="text" id="height" placeholder="Height">
+                </div>
+
+                <button type="submit" value="Calculate" class="mui-btn mui-btn--primary mui-btn--raised" style="margin-top: 1rem"> Calculate </button>
+            </form>
+
+            <div style="margin-top: 1rem">
+                <span id="display_value"></span>
+                <span id="display_message"></span>
+            </div>
+        </div>
+    </div>
 
 </body>
-
 </html>
